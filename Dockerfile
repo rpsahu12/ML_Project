@@ -34,4 +34,4 @@ USER appuser
 EXPOSE 5000
 
 # The command to run your application using Gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
