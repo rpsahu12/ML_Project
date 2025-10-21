@@ -1,1 +1,150 @@
-<h1>welcome to the home page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Predictor - Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styles - Dark Theme */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #2c3e50; /* Deep charcoal */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            color: #ecf0f1; /* Light gray for general text */
+        }
+
+        /* Main Container for the content */
+        .container {
+            background-color: #34495e; /* Slightly lighter dark gray */
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            max-width: 700px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #4a627a;
+        }
+
+        /* Header Title */
+        h1 {
+            color: #ecf0f1;
+            font-weight: 600;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Main description paragraph */
+        p.description {
+            font-size: 1.1em;
+            color: #bdc3c7; /* Muted light gray */
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        /* Sub-heading for the feature list */
+        h2 {
+            color: #3498db; /* Vibrant blue accent */
+            font-weight: 500;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-top: 1px solid #4a627a;
+            padding-top: 30px;
+        }
+
+        /* Feature list styling */
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto 40px auto;
+            display: inline-block;
+            text-align: left;
+            max-width: 400px;
+        }
+
+        .features li {
+            color: #bdc3c7;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .features li::before {
+            content: '✓'; /* Checkmark symbol */
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Call-to-action Button */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: #3498db; /* Vibrant blue button */
+            color: #ffffff;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            letter-spacing: 0.8px;
+        }
+
+        .btn:hover {
+            background-color: #2980b9; /* Slightly darker blue on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 25px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            p.description {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Welcome to the Student Performance Predictor 🧠</h1>
+        
+        <p class="description">
+            This tool uses a machine learning model to forecast a student's score in Mathematics.
+            By analyzing key demographic and academic preparation factors, we provide an estimated performance metric.
+        </p>
+        
+        <h2>Prediction is Based On:</h2>
+        <ul class="features">
+            <li>Gender & Race/Ethnicity</li>
+            <li>Parental Level of Education</li>
+            <li>Lunch Program Type</li>
+            <li>Test Preparation Course Completion</li>
+            <li>Student's Reading & Writing Scores</li>
+        </ul>
+        
+        <!-- This link will take the user to the prediction form page -->
+        <a href="{{ url_for('predict_datapoint') }}" class="btn">
+            Get Started
+        </a>
+    </div>
+
+</body>
+</html>
